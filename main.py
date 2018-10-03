@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy 
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -8,7 +8,8 @@ app.config['SQLALCHEMY_ECHO'] = True
 
 db = SQLAlchemy(app) #creates the database object
 
-class Task(db.model):
+class Task(db.Model):
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
 
