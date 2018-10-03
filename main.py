@@ -6,7 +6,6 @@ app.config['DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://get-it-done:launchcode101@localhost:8889/get-it-done'
 app.config['SQLALCHEMY_ECHO'] = True
 
-db = SQLAlchemy(app) #creates the database object
 
 class Task(db.Model):
 
